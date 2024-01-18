@@ -8,17 +8,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.kh.jdbc.day05.member.common.JDBCTemplate;
 import com.kh.jdbc.day05.member.model.vo.Member;
 
 public class MemberDAO {
 	
-	private JDBCTemplate jdbcTemplate;
-	
-	public MemberDAO() {
-		jdbcTemplate = JDBCTemplate.getInstance();
-	}
-
 	public int insertMember(Connection conn, Member member) {
 		String query = "INSERT INTO MEMBER_TBL VALUES(?,?,?,?,?,?,?,?,?,SYSDATE)";
 //		Connection conn = null;
